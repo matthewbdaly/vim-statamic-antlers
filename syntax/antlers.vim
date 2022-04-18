@@ -25,19 +25,10 @@ else
     setlocal iskeyword+=@-@
 endif
 
-syn region  antlersEcho       matchgroup=antlersDelimiter start="@\@<!{{" end="}}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
-syn region  antlersEcho       matchgroup=antlersDelimiter start="{!!" end="!!}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
+syn region  antlersEcho       matchgroup=antlersDelimiter start="@{{" end="}}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
 syn region  antlersComment    matchgroup=antlersDelimiter start="{{#" end="#}}"  contains=antlersTodo  containedin=ALLBUT,@antlersExempt keepend
 
 syn keyword antlersKeyword if else /if partial value collection taxonomy noparse /noparse
-
-if exists('g:antlers_custom_directives')
-    exe "syn keyword antlersKeyword @" . join(g:antlers_custom_directives, ' @') . " nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt"
-endif
-if exists('g:antlers_custom_directives_pairs')
-    exe "syn keyword antlersKeyword @" . join(keys(g:antlers_custom_directives_pairs), ' @') . " nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt"
-    exe "syn keyword antlersKeyword @" . join(values(g:antlers_custom_directives_pairs), ' @') . " containedin=ALLBUT,@antlersExempt"
-endif
 
 syn region  antlersPhpRegion  matchgroup=antlersKeyword start="\<@php\>\s*(\@!" end="\<@endphp\>"  contains=@antlersPhp  containedin=ALLBUT,@antlersExempt keepend
 syn match   antlersKeyword "@php\ze\s*(" nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt
