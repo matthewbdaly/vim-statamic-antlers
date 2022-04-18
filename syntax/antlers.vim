@@ -49,7 +49,7 @@ hi def link antlersDelimiter      PreProc
 hi def link antlersComment        Comment
 hi def link antlersTodo           Todo
 hi def link antlersKeyword        Statement
-hi def link antlersOperator       Operator
+hi def link antlersOperator       Normal
 
 let b:current_syntax = 'antlers'
 
