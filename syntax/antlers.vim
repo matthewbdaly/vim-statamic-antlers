@@ -28,7 +28,7 @@ endif
 syn region  antlersEcho       matchgroup=antlersDelimiter start="@{{" end="}}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
 syn region  antlersComment    matchgroup=antlersDelimiter start="{{#" end="#}}"  contains=antlersTodo  containedin=ALLBUT,@antlersExempt keepend
 
-syn keyword antlersKeyword if else /if partial value collection taxonomy noparse /noparse
+syn keyword antlersKeyword if else elseif /if noparse /noparse unless /unless
 
 syn region  antlersPhpRegion  matchgroup=antlersKeyword start="\<@php\>\s*(\@!" end="\<@endphp\>"  contains=@antlersPhp  containedin=ALLBUT,@antlersExempt keepend
 syn match   antlersKeyword "@php\ze\s*(" nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt
