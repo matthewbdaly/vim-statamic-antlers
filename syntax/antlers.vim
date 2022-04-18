@@ -32,6 +32,8 @@ syn keyword antlersKeyword if else /if partial value collection taxonomy noparse
 
 syn region  antlersPhpRegion  matchgroup=antlersKeyword start="\<@php\>\s*(\@!" end="\<@endphp\>"  contains=@antlersPhp  containedin=ALLBUT,@antlersExempt keepend
 syn match   antlersKeyword "@php\ze\s*(" nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt
+syn match antlersOperator "\v:"
+syn match antlersOperator "\v\|"
 
 syn region  antlersPhpParenBlock  matchgroup=antlersDelimiter start="\s*(" end=")" contains=@antlersPhp,antlersPhpParenBlock skipwhite contained
 
@@ -47,6 +49,7 @@ hi def link antlersDelimiter      PreProc
 hi def link antlersComment        Comment
 hi def link antlersTodo           Todo
 hi def link antlersKeyword        Statement
+hi def link antlersOperator       Operator
 
 let b:current_syntax = 'antlers'
 
