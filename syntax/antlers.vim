@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:     Antlers (Statamic)
 " Maintainer:   Matthew Daly <matthewbdaly@gmail.com>
-" Filenames:   *.antlers.html
+" Filenames:   *.antlers.html, *.antlers.php
 
 if exists('b:current_syntax')
     finish

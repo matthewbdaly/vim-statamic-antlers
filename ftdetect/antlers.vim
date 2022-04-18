@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.antlers.html set filetype=antlers
+au BufRead,BufNewFile *.antlers.{php,html} set filetype=antlers
