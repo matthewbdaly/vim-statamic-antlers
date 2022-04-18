@@ -29,16 +29,7 @@ syn region  antlersEcho       matchgroup=antlersDelimiter start="@\@<!{{" end="}
 syn region  antlersEcho       matchgroup=antlersDelimiter start="{!!" end="!!}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
 syn region  antlersComment    matchgroup=antlersDelimiter start="{{#" end="#}}"  contains=antlersTodo  containedin=ALLBUT,@antlersExempt keepend
 
-syn keyword antlersKeyword @if @elseif @foreach @forelse @for @while @can @cannot @elsecan @elsecannot @include
-    \ @includeIf @each @inject @extends @section @stack @push @unless @yield @parent @hasSection @break @continue
-    \ @unset @lang @choice @component @slot @prepend @json @isset @auth @guest @switch @case @includeFirst @empty
-    \ @includeWhen
-    \ nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt
-
-syn keyword antlersKeyword @else @endif @endunless @endfor @endforeach @endforelse @endwhile @endcan
-    \ @endcannot @stop @append @endsection @endpush @show @overwrite @verbatim @endverbatim @endcomponent
-    \ @endslot @endprepend @endisset @endempty @endauth @endguest @endswitch
-    \ containedin=ALLBUT,@antlersExempt
+syn keyword antlersKeyword if else /if partial value collection taxonomy noparse /noparse
 
 if exists('g:antlers_custom_directives')
     exe "syn keyword antlersKeyword @" . join(g:antlers_custom_directives, ' @') . " nextgroup=antlersPhpParenBlock skipwhite containedin=ALLBUT,@antlersExempt"
