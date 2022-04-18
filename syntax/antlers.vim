@@ -27,7 +27,7 @@ endif
 
 syn region  antlersEcho       matchgroup=antlersDelimiter start="@\@<!{{" end="}}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
 syn region  antlersEcho       matchgroup=antlersDelimiter start="{!!" end="!!}"  contains=@antlersPhp,antlersPhpParenBlock  containedin=ALLBUT,@antlersExempt keepend
-syn region  antlersComment    matchgroup=antlersDelimiter start="{{--" end="--}}"  contains=antlersTodo  containedin=ALLBUT,@antlersExempt keepend
+syn region  antlersComment    matchgroup=antlersDelimiter start="{{#" end="#}}"  contains=antlersTodo  containedin=ALLBUT,@antlersExempt keepend
 
 syn keyword antlersKeyword @if @elseif @foreach @forelse @for @while @can @cannot @elsecan @elsecannot @include
     \ @includeIf @each @inject @extends @section @stack @push @unless @yield @parent @hasSection @break @continue
